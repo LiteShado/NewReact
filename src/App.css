@@ -1,42 +1,49 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.todo-item {
+    padding: 16px;
+    border: 1px solid red;
+    margin: 16px;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.heading-style {
+    padding: 1px solid blacl;
+    margin: 16px;
+    color: purple;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.popup {
+    background-color: white;
+    padding: 16px;
+    text-align: center;
+    width: 320px;
+    z-index: 10;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translare(-50%, -50%);
+    display: flex;
+    flex-direction: column;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.popup__btns {
+    margin-top: 16px;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.popup__btn {
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: darkblue;
+    color: lightblue;
+    border: 2px solid darkblue;
+    margin: 4px;
+    width: 64px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.popup__btn--cancel {
+    background-color: transparent;
+    color: lightcoral;
 }
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.backdrop {
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
 }
