@@ -7,8 +7,10 @@ function Counter({ counterHeading }) {
     <>
       <h1>Counter: {count}</h1>
       <h1 className="counterHeading">{counterHeading}</h1>
-      <button onClick={() => setCount(count + 1)}>+</button>
-      <button onClick={() => setCount(count - 1)}>-</button>
+      <button onClick={() => {
+        setCount((prevCount) => prevCount+ 1)}}>+</button>
+    <button onClick={() => {
+        setCount((prevCount) => prevCount- 1)}}>-</button>
       <button onClick={() => setCount(0)}>Reset</button>
     </>
   );

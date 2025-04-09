@@ -9,13 +9,18 @@ function App() {
 
   const [popupOpen, setPopupOpen] = useState(false);
 
+  function togglePopup() {
+    setPopupOpen(true);
+    console.log("toggled")
+  }
 
-  
+
 
   return (
     <>
     <Counter />
-      <Heading title="Nat's List" />
+      <Heading title="Nat's List" 
+      />
       <div>
         <input
           type="text"
@@ -27,9 +32,12 @@ function App() {
           setPopupOpen(true)
         }}>Add to do</button>
       </div>
-      <Todo task="learn react" />
-      <Todo task="land a junior job" />
-      <Todo task="earn $200,000+" />
+      <Todo task="learn react"
+      togglePopup={togglePopup} />
+      <Todo task="land a junior job"
+      togglePopup={togglePopup} />
+      <Todo task="earn $200,000+"
+      togglePopup={togglePopup} />
 
       {popupOpen && (
         <Popups

@@ -1,9 +1,10 @@
-function Heading({title}) {
-    return (
+function Heading({ title }) {
+  return (
     <div className="heading-style">
-        <span>{title}</span>
+      <span className="title">{title}</span>
+      
     </div>
-
-)};
+  );
+}
 
 export default Heading;
