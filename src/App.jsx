@@ -13,7 +13,7 @@ function App() {
     <Todo task="learn react" />
     <Todo task="land a junior job"/>
     <Todo task="earn $200,000+"/>
-    <Popups />
+    <Popups greeting="Are you sure?" />
     
     </>
    
