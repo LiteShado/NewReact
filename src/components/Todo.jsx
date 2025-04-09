@@ -1,19 +1,15 @@
-function Todo({task, description}) {
-
-    function handleClick() {
-        console.log("clicked"); 
-    }
-    return (
-        <div className="todo-item">
-            <h2>{ task } </h2>
-            <h2>{ description } </h2>
-            <button onClick={() => 
-                
-                    handleClick()
-                
-            }>Delete</button>
-        </div> 
-    )
+function Todo({ task }) {
+  function deleteHandler() {
+    console.log("delete", task);
+  }
+  return (
+    <div className="todo-item">
+      <h2>{task} </h2>
+      <button className="popup__btn" onClick={deleteHandler}>
+        Done
+      </button>
+    </div>
+  );
 }
 
-export default Todo; 
+export default Todo;

@@ -1,7 +1,7 @@
-function Heading() {
+function Heading({title}) {
     return (
     <div className="heading-style">
-        <h1>My List</h1>
+        <span>{title}</span>
     </div>
 
 )};

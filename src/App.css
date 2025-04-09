@@ -1,3 +1,11 @@
+.title {
+    color: #fff;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    
+}
+
 .todo-item {
     padding: 16px;
     border: 1px solid red;
@@ -23,17 +31,22 @@
 }
 .popup__btns {
     margin-top: 16px;
+    
+    
 }
 .popup__btn {
-    padding: 4px 8px;
+    padding: 4px 10px;
     cursor: pointer;
     border-radius: 4px;
-    background-color: darkblue;
-    color: lightblue;
+    background-color: #fff;
+    color: #000;
     border: 2px solid darkblue;
     opacity: .5;
-    margin: 4px;
-    width: 70px;
+    margin: auto;
+    width: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    
 }
 .popup__btn--cancel {
     background-color: transparent;
