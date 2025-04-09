@@ -3,13 +3,18 @@ import "./App.css";
 import Todo from "./components/Todo.jsx";
 import Heading from "./components/Heading.jsx";
 import Popups from "./components/Popups.jsx";
+import Counter from "./components/Counter.jsx";
 
 function App() {
 
-  const [popupOpen, setPopupOpen] = useState(false)
+  const [popupOpen, setPopupOpen] = useState(false);
+
+
+  
 
   return (
     <>
+    <Counter />
       <Heading title="Nat's List" />
       <div>
         <input
@@ -18,13 +23,15 @@ function App() {
             console.log(event.target.value);
           }}
         />
-        <button>Add to do</button>
+        <button onClick={() => {
+          setPopupOpen(true)
+        }}>Add to do</button>
       </div>
       <Todo task="learn react" />
       <Todo task="land a junior job" />
       <Todo task="earn $200,000+" />
 
-      {false && (
+      {popupOpen && (
         <Popups
           greeting="Are you sure?"
           description="ABSOLUTELY"
