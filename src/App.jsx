@@ -6,21 +6,21 @@ import Popups from "./components/Popups.jsx";
 import Counter from "./components/Counter.jsx";
 
 function App() {
-
   const [popupOpen, setPopupOpen] = useState(false);
 
   function togglePopup() {
     setPopupOpen(true);
-    console.log("toggled")
+    console.log("toggled");
   }
 
-
+  function toggleCancel() {
+    setPopupOpen(false);
+  }
 
   return (
     <>
-    <Counter />
-      <Heading title="Nat's List" 
-      />
+      <Counter />
+      <Heading title="Nat's List" />
       <div>
         <input
           type="text"
@@ -28,19 +28,21 @@ function App() {
             console.log(event.target.value);
           }}
         />
-        <button onClick={() => {
-          setPopupOpen(true)
-        }}>Add to do</button>
+        <button
+          onClick={() => {
+            setPopupOpen(true);
+          }}
+        >
+          Add to do
+        </button>
       </div>
-      <Todo task="learn react"
-      togglePopup={togglePopup} />
-      <Todo task="land a junior job"
-      togglePopup={togglePopup} />
-      <Todo task="earn $200,000+"
-      togglePopup={togglePopup} />
+      <Todo task="learn react" togglePopup={togglePopup} />
+      <Todo task="land a junior job" togglePopup={togglePopup} />
+      <Todo task="earn $200,000+" togglePopup={togglePopup} />
 
       {popupOpen && (
         <Popups
+          toggleCancel={toggleCancel}
           greeting="Are you sure?"
           description="ABSOLUTELY"
           cancel="cancel"

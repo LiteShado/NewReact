@@ -1,4 +1,4 @@
-function Popups({ greeting, description, cancel }) {
+function Popups({ greeting, description, cancel, toggleCancel }) {
   return (
     <>
       <div className="popup">
@@ -14,9 +14,7 @@ function Popups({ greeting, description, cancel }) {
           </button>
           <button
             className="popup__btn popup__btn--cancel"
-            onClick={(event) => {
-              console.log("cancel clicked");
-            }}
+            onClick={toggleCancel}
           >
             {cancel}
           </button>
