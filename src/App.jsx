@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Todo from "./components/Todo.jsx";
 import Heading from "./components/Heading.jsx";
@@ -16,6 +16,11 @@ function App() {
   function toggleCancel() {
     setPopupOpen(false);
   }
+
+  useEffect(() => {
+    console.log("useffect");
+  }, []) 
+  // function that I want to run is the first arguement, which is a callback function. dependency array is the second argument
 
   return (
     <>
