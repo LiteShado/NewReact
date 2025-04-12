@@ -1,28 +1,24 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Posts from "./pages/Posts";
+import Nav from "./components/Nav";
+import Users from "./pages/Users";
 
 function App() {
   return (
     <>
       <Router>
-        <nav>
-
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/posts">Posts</Link>
-          <Link to="/contact">Contact</Link>
-
-        </nav>
+        <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/posts" element={<Posts />} />
+          <Route path="/users/username" element={<Users/>} />
         </Routes>
       </Router>
     </>
